@@ -1,15 +1,16 @@
 {
-  "name": "jsref",
+  "name": "alexandria-js",
   "version": "0.0.0",
   "description": "Quick Reference for JS's standard API.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/killdream/jsref.git"
+    "url": "git://github.com/killdream/alexandria.js.git"
   },
   "author": "Quildreen \"Sorella\" Motta <quildreen@gmail.com>",
   "license": "Creative Commons",
   "readmeFilename": "README.md",
   "calliope": {
+    "examples": "examples",
     "output": "docs/api",
     "copyright": "© 2013 Quildreen \"Sorella\" Motta. Licensed under Creative Commons.",
     "packages": [{ "files": [ "src/*.js" ] }]

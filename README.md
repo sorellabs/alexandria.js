@@ -1,4 +1,4 @@
-# JS Reference
+# Alexandria.js
 
 Quick Reference for JS's standard API.
 
