@@ -242,3 +242,37 @@ Array.prototype.reduce = function(callback, initialValue) { }
 //
 // :: @Array-like => (b, a, Number, [a] -> b), b? -> b
 Array.prototype.reduceRight = function(callback, initialValue) { }
+
+////// function map
+//
+// Transforms each item in the Array by a function.
+//
+// Basically, this means that `[1, 2, 3].map(inc)` is the same as
+// `[inc(1), inc(2), inc(3)]`.
+//
+// :: (a, Number, [a] -> b), Object? -> [b]
+Array.prototype.map = function(callback, thisObject) { }
+
+////// function filter
+//
+// Returns a new array that contains only the items that pass the given
+// predicate.
+//
+// :: (a, Number, [a] -> Bool), Object? -> [a]
+Array.prototype.filter = function(callback, thisObject) { }
+
+////// function every
+//
+// Returns true if all objects pass the given predicate, false if any
+// doesn't.
+//
+// :: (a, Number, [a] -> Bool), Object? -> Bool
+Array.prototype.every = function(callback, thisObject) { }
+
+////// function some
+//
+// Returns true if any object pass the given predicate, false if none
+// passes.
+//
+// :: (a, Number, [a] -> Bool), Object? -> Bool
+Array.prototype.some = function(callback, thisObject) { }
