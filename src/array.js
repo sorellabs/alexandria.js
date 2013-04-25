@@ -36,9 +36,7 @@ function Array(n1, n2 /*, ... */) { }
 Array.isArray = function(a) { }
 
 
-//// -- Instances ------------------------------------------------------
-
-///// {} prototype
+//// {} prototype
 //
 // Properties shared by instances of Array.
 //
