@@ -21,7 +21,8 @@
 //
 // The Array function and its prototype provide several functions to
 // manipulate both actual Arrays and `Array-like` objects.
-
+function Array(length) { }
+function Array(n1, n2 /*, ... */) { }
 
 
 
@@ -32,7 +33,7 @@
 // Verifies if the given object is an actual Array (not an Array-like).
 //
 // :: a -> Bool
-
+Array.isArray = function(a) { }
 
 
 //// -- Instances ------------------------------------------------------
@@ -68,6 +69,8 @@
 // length of the Array.
 //
 // :: @Array-like* => a... -> Number
+Array.prototype.push = function(a1, a2 /*, ... */) { }
+
 
 ////// function pop
 //
@@ -77,6 +80,7 @@
 // `undefined`.
 //
 // ::@Array-like* => () -> Maybe a
+Array.prototype.pop = function() { }
 
 ////// function unshift
 //
@@ -84,6 +88,7 @@
 // the new length of the Array.
 //
 // :: @Array-like* => a... -> Number
+Array.prototype.unshift = function(a1, a2 /*, ... */) { }
 
 ////// function shift
 //
@@ -93,6 +98,7 @@
 // `undefined`.
 //
 // ::@Array-like* => () -> Maybe a
+Array.prototype.shift = function() { }
 
 ////// function splice
 //
@@ -102,7 +108,7 @@
 // add all the given elements at `index` in the array.
 //
 // :: @Array-like* => index:Number, size:Number, a... -> this
-
+Array.prototype.splice = function(index, size, a1, a2 /*, ... */) { }
 
 
 ///// -- Sorting and ordering ------------------------------------------
@@ -112,6 +118,7 @@
 // Inverts the order of elements in the Array.
 //
 // :: @Array-like* => () -> [a]
+Array.prototype.reverse = function() { }
 
 ////// function sort
 //
@@ -133,7 +140,7 @@
 // function returns 0.
 //
 // :: @Array-like* => (a, a -> Number) -> [a]
-
+Array.prototype.sort = function(criteria) { }
 
 
 ///// -- Constructing arrays -------------------------------------------
@@ -143,6 +150,7 @@
 // Concatenates one or more arrays together.
 //
 // :: @Array-like => [a]... -> [a]
+Array.prototype.concat = function(as1, as2 /*, ... */) { }
 
 ////// function slice
 //
@@ -156,7 +164,7 @@
 // to be relative to the end of the Array.
 //
 // :: @Array-like* => starting:Number?, ending:Number? -> [a]
-
+Array.prototype.slice = function(starting, ending) { }
 
 
 ///// -- Acessing elements ---------------------------------------------
@@ -169,6 +177,7 @@
 // If no element matches the given one, it returns -1.
 //
 // :: @Array-like => a -> Number
+Array.prototype.indexOf = function(a) { }
 
 ////// function lastIndexOf
 //
@@ -178,7 +187,7 @@
 // If no element matches the given one, it returns -1.
 //
 // :: @Array-like => a -> Number
-
+Array.prototype.lastIndexOf = function(a) { }
 
 
 ///// -- Transforming --------------------------------------------------
@@ -189,7 +198,8 @@
 //
 // If no separator is given, `", "` is assumed.
 //
-// :: String? -> String
+// :: @Array-like => String? -> String
+Array.prototype.join = function(separator) { }
 
 ////// function toString
 //
@@ -197,8 +207,38 @@
 //
 // (Same as `array.join()`)
 //
-// :: () -> String
-
+// :: @Array-like => () -> String
+Array.prototype.toString = function() { }
 
 
 ///// -- Iteration -----------------------------------------------------
+
+////// function forEach
+//
+// Applies a function to every item in the list, in ascending order.
+//
+// :: @Array-like => (a, Number, [a] -> ()), Object? -> ()
+Array.prototype.forEach = function(callback, thisObject) { }
+
+
+///// -- Folds ---------------------------------------------------------
+
+////// function reduce
+//
+// Computes a value out of a list of values, from left to right.
+//
+// If no initial value is specified, the function uses the first element
+// of the Array and reduces on the rest of the list.
+//
+// :: @Array-like => (b, a, Number, [a] -> b), b? -> b
+Array.prototype.reduce = function(callback, initialValue) { }
+
+////// function reduceRight
+//
+// Computes a value out of a list of values, from right to left.
+//
+// If no initial value is specified, the function uses the last element
+// of the Array and reduces on the rest of the list.
+//
+// :: @Array-like => (b, a, Number, [a] -> b), b? -> b
+Array.prototype.reduceRight = function(callback, initialValue) { }
