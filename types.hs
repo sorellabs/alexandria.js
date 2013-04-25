@@ -24,21 +24,37 @@ data SortingRank :: Lower -1 | Equal 0 | Greater 1
   
 
 class Array a deriving Object a
+  -- * Reflection
   length :: UInt32
+
+  -- * Manipulating elements
   push! :: a... -> Number
   pop! :: () -> Maybe a
   unshift! :: a... -> Number
   shift! :: () -> Maybe a
   splice! :: Number, Number, a... -> this
+
+  -- * Sorting
   reverse! :: () -> [a]
   sort! :: (a, b -> SortingRank) -> [a]
+
+  -- * Constructing
   concat :: [a]... -> [a]
-  join :: String -> String
   slice :: Number?, Number? -> [a]
+
+  -- * Transforming
+  join :: String -> String
   toString :: () -> String
+  toSource :: () -> String -- @nonStandard
+
+  -- * Accessing elements
   indexOf :: a -> Number
   lastIndexOf :: a -> Number
+
+  -- * Iteration
   forEach :: (a, Number, [a] -> ()), Object? -> ()
+
+  -- * Folds
   every :: (a, Number, [a] -> Bool), Object? -> Bool
   some :: (a, Number, [a] -> Bool), Object? -> Bool
   filter :: (a, Number, [a] -> Bool), Object? -> [a]
@@ -46,7 +62,6 @@ class Array a deriving Object a
   reduce :: (b, a, Number, [a] -> b), b? -> b
   reduceRight :: (b, a, Number, [a] -> b), b? -> b
 
-  toSource :: () -> String -- @nonStandard
   
 -- Booleans
 
