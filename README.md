@@ -1,15 +1,13 @@
-# Alexandria.js
+Alexandria.js
+=============
 
-Quick Reference for JS's standard API.
-
-To build it manually you'll need Node installed, then just run:
-
-    $ npm install -g calliope
-    $ calliope build
+Alexandria is an API search engine for JavaScript and NPM packages. It allows
+searching modules by names, description, keywords or approximate type. IOW,
+it's Google for NPM modules! 
 
 
 ## Licence
 
-[Creative Commons][CC].
+Copyright (c) 2013. Quildreen Motta.
 
-[CC]: http://creativecommons.org/licenses/by/3.0/
+Released under the [MIT licence](https://github.com/killdream/alexandria.js/blob/master/LICENCE)
